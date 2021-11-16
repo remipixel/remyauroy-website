@@ -41,6 +41,15 @@ export default function ContainerBlock({ children, ...customMeta }) {
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
+        {/*Global site tag (gtag.js) - Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C9MWGLQPEE"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
+
+          gtag('config', 'G-C9MWGLQPEE');
+        </script>
       </Head>
       <main className="dark:bg-gray-800 w-full">
         <Navbar />
