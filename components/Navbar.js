@@ -35,13 +35,12 @@ export default function Navbar() {
         <div className="space-x-8 hidden md:block">
           <Link href="/about">
             <a
-              className={`text-base  ${
-                router.asPath === "/about"
+              className={`text-base  ${router.asPath === "/about"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
-              }`}
+                }`}
             >
-              About{" "}
+              A propos{" "}
               {router.asPath === "/about" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -61,13 +60,12 @@ export default function Navbar() {
           </Link>
           <Link href="/projects">
             <a
-              className={`text-base  ${
-                router.asPath === "/projects"
+              className={`text-base  ${router.asPath === "/projects"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
-              }`}
+                }`}
             >
-              Projects
+              Projets
               {router.asPath === "/projects" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,13 +85,12 @@ export default function Navbar() {
           </Link>
           <Link href="/experience">
             <a
-              className={`text-base  ${
-                router.asPath === "/experience"
+              className={`text-base  ${router.asPath === "/experience"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
-              }`}
+                }`}
             >
-              Experience{" "}
+              Expérience{" "}
               {router.asPath === "/experience" && (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -113,11 +110,10 @@ export default function Navbar() {
           </Link>
           <Link href="/contact">
             <a
-              className={`text-base  ${
-                router.asPath === "/contact"
+              className={`text-base  ${router.asPath === "/contact"
                   ? "text-gray-800 font-bold dark:text-gray-400"
                   : "text-gray-600 dark:text-gray-300 font-normal "
-              }`}
+                }`}
             >
               Contact
               {router.asPath === "/contact" && (
@@ -222,17 +218,17 @@ export default function Navbar() {
       <div className="space-x-8 block md:hidden mt-4">
         <Link href="/about">
           <a className="text-base font-normal text-gray-600 dark:text-gray-300">
-            About
+            A propos
           </a>
         </Link>
         <Link href="/projects">
           <a className="text-base font-normal text-gray-600 dark:text-gray-300">
-            Projects
+            Projets
           </a>
         </Link>
         <Link href="/experience">
           <a className="text-base font-normal text-gray-600 dark:text-gray-300">
-            Experience
+            Expérience
           </a>
         </Link>
         <Link href="/contact">
