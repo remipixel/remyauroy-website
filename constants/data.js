@@ -96,7 +96,7 @@ const userData = {
   resumeUrl:
     "https://moso95.a1.swdrive.fr/index.php/s/nTtYq36dADNR5eq/download/CV_Final_Developpeur.pdf",
   socialLinks: {
-    instagram: "https://instagram.com/remipixeldev",
+    instagram: "https://www.instagram.com/remipixeldev/",
     twitter: "https://twitter.com/remipixeldev",
     linkedin: "https://linkedin.com/in/remyauroy",
     github: "https://github.com/remipixel",
