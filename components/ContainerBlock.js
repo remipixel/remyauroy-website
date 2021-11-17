@@ -1,14 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from 'next/script';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-
-import { init } from "@socialgouv/matomo-next";
-const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL;
-const MATOMO_SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID;
-
-
 
 export default function ContainerBlock({ children, ...customMeta }) {
   const router = useRouter();
@@ -47,6 +42,21 @@ export default function ContainerBlock({ children, ...customMeta }) {
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
+        <Script
+        strategy='lazyOnload'
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+      />
+      <Script id='ga-analytics'>
+        {
+          `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+          `
+        }
+      </Script>
       </Head>
       <main className="dark:bg-gray-800 w-full">
         <Navbar />
