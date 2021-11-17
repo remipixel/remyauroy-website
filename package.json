@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@socialgouv/matomo-next": "^1.2.2",
     "axios": "^0.21.1",
     "next": "10.x",
     "next-themes": "0.0.15",
