@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Script from 'next/script';
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
@@ -42,19 +41,6 @@ export default function ContainerBlock({ children, ...customMeta }) {
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-C9MWGLQPEE"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-C9MWGLQPEE');
-        `}
-      </Script>
       </Head>
       <main className="dark:bg-gray-800 w-full">
         <Navbar />
