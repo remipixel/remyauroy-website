@@ -42,20 +42,18 @@ export default function ContainerBlock({ children, ...customMeta }) {
         {meta.date && (
           <meta property="article:published_time" content={meta.date} />
         )}
-        <Script
-        strategy='lazyOnload'
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-C9MWGLQPEE"
+        strategy="afterInteractive"
       />
-      <Script id='ga-analytics'>
-        {
-          `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-          `
-        }
+          gtag('config', 'G-C9MWGLQPEE');
+        `}
       </Script>
       </Head>
       <main className="dark:bg-gray-800 w-full">
