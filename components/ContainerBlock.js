@@ -23,7 +23,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
 
   const meta = {
     title: "Rémy Auroy - Développeur, UI/UX Designer, Graphiste, Automatisation et Domotique IOT",
-    description: `Développeur web à Quimper. Spécialiste de la communication digitale et du développement web en Bretagne. Réalisez vos projets web et SEO avec moi !`,
+    description: `Développeur web et graphiste à Quimper. Spécialiste de la communication digitale et de l'hébergement web en Bretagne. Viens réaliser tes projets web avec moi !`,
     image: "/moi.png",
     type: "website",
     ...customMeta,
@@ -36,11 +36,11 @@ export default function ContainerBlock({ children, ...customMeta }) {
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
-          content={`https://pixeldigital.fr${router.asPath}`}
+          content={`https://remyauroy.fr${router.asPath}`}
         />
         <link
           rel="canonical"
-          href={`https://pixeldigital.fr${router.asPath}`}
+          href={`https://remyauroy.fr${router.asPath}`}
         />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Rémy Auroy" />
